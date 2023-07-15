@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+:root {
+  --first-color: #e0e0e0;
+  --first-color-hover: #aeaeae;
+  --first-color-light: #ededed;
+  --body-color: #f4fbfb;
+  --text-color: #232323;
+  --side-color-hover: #aaaaaa;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.75rem;
+  --body-font: 'Noto Sans JP', sans-serif;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+body::-webkit-scrollbar {
+  width: 0.70rem;
+  /* Ancho del scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Color del fondo del scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+
+  background-color: #a1a1a1;
+  /* Color del thumb (barra) del scrollbar */
+  border-radius: 8px;
+  /* Borde redondeado del thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Color del thumb al pasar el cursor sobre él */
+}
+
+span {
+  font-family: 'Cascadia Code', sans-serif;
+}
+
+.section-main {
+  display: flex;
+}
+
+.section-main.dark-theme {
+  --body-color: #232323;
+  --text-color: #f4fbfb;
+  --side-color-hover: #1c1e2a;
+}
+
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow: hidden;
+}
+
+.container-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-self: self-start;
+}
+
+.container-grid div {
+  box-sizing: border-box;
+}
+
+
+.row-border,
+.row-code,
+.row-center {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: start;
+  width: 100%;
+}
+
+.row-center {
+  align-items: center;
+}
+
+.row-code {
+  padding: 3px 0px;
+}
+
+.row-border>* {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.row-center>* {
+  margin-right: 1rem;
+}
+
+
+
+
+.column-code {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  background-color: #292D3E;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  overflow-x: auto;
+}
+
+.column-code .row-code {
+  white-space: nowrap;
+ 
+}
+
+.title {
+  font-size: var(--biggest-font-size);
+}
+
+.section-home {
+  width: 100%;
+  margin-left: 200px;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.side-bar {
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  padding: 1rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.side-bars{
+  display: none;
+}
+
+.side-bar-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.side-list {
+  list-style-type: none;
+}
+
+.side-list li {
+  margin-bottom: 0.35rem;
+  padding: 0.75rem;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+
+.side-list li:hover {
+  background-color: var(--side-color-hover);
+}
+
+
+.side-bar::-webkit-scrollbar {
+  width: 1rem;
+  /* Ancho del scrollbar */
+}
+
+.side-bar::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Color del fondo del scrollbar */
+}
+
+.side-bar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* Color del thumb (barra) del scrollbar */
+  border-radius: 4px;
+  /* Borde redondeado del thumb */
+}
+
+.side-bar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Color del thumb al pasar el cursor sobre él */
+}
+
+
+
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+
+}
+
+.checkbox-label {
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--text-color) 2px solid;
+}
+
+.fa-moon {
+  color: var(--text-color)
+}
+
+.fa-sun {
+  color: var(--text-color)
+}
+
+.checkbox-label .ball {
+  background-color: var(--text-color);
+  width: 22px;
+  height: 23px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.footer-text{
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+span.p {
+  color: #89DDFF;
+}
+
+span.nt {
+  color: #FF454F;
+}
+
+span.st {
+  color: #C3E879;
+}
+
+span.pr {
+  color: #FFBF54;
+}
+
+span.tx {
+  color: #c5c5c5;
+}
+
+@media screen and (max-width: 766px) {
+  .section-home {
+    margin-left: 20px;
+  }
+
+  .side-bar {
+    width: 20px;
+    overflow: hidden;
+    transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+  }
+
+  .side-hidden{
+    display: none;
+  }
+
+  .side-bars{
+    display: block;
+  }
+
+  .side-bar.open{
+    width: 100%;
+  }
+
+  .side-hidden.side-bar.open{
+    display: block;
+  }
+
+  .side-row{
+    justify-content: space-between;
+  }
+
+  
+
+}

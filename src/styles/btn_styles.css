@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+
+/* ------------------ COLORS, FONTSIZE AND MARGENES -------*/
+:root {
+    --first-color: #e0e0e0;
+    --first-color-hover : #aeaeae;
+    --first-color-light : #ededed;
+    --btn-text-color: #232323;
+    --font-size : 1rem;
+    --body-btn: 'Noto Sans JP', sans-serif;
+}
+
+button{
+    font-family: var(--body-btn);
+    background-color: var(--first-color);
+    color: var(--btn-text-color);
+    font-size: var(--font-size);
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: none;
+    /*box-shadow: 0px 2px 3px 0px #33333333;*/
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+button:disabled::before {
+    background-color: transparent;
+}
+
+button:hover, button:focus{
+    background-color: var(--first-color-hover);
+    color: var(--btn-text-color);
+}
+
+
+
+
+.mr-05{
+    margin-right: 0.5rem;
+}
+
+.ml-05{
+    margin-left: 0.5rem;
+}
+  
+
+
+.btn-icon{
+    font-size: var(--font-size);
+}
+.btn-vari-outline{
+    --first-color: #3d5afe;
+    background-color: transparent;
+    border: 1px solid var(--first-color);
+    color: var(--first-color);
+}
+
+.btn-vari-outline:hover, 
+.btn-vari-outline:focus, 
+.btn-vari-text:hover, 
+.btn-vari-text:focus{
+    background-color: var(--first-color-light);
+    color: var(--first-color);
+}
+
+.btn-vari-text{
+    --first-color: #3d5afe;
+    background-color: transparent;
+    color: var(--first-color);
+}
+
+
+.btn-disable-shadow{
+box-shadow: none;
+}
+
+.btn-color-default{
+    --first-color: #e0e0e0;
+}
+
+.btn-color-primary{
+    --first-color: #3d5afe;
+    --first-color-hover : #0039cb;
+    --first-color-light : #2962ff1a;
+    --btn-text-color: #ffffff;
+}
+
+.btn-color-secondary{
+    --first-color: #455a64;
+    --first-color-hover : #1c313a;
+    --first-color-light : #1c313a27;
+    --btn-text-color: #ffffff;
+}
+
+
+.btn-color-danger{
+    --first-color: #d32f2f;
+    --first-color-hover: #9a0007;
+    --first-color-light : #9a00081f;
+    --btn-text-color: #ffffff;
+}
+
+.btn-color-warning{
+    --first-color: #F4D03F;
+    --first-color-hover: #D4AC0D;
+    --first-color-light : #d4ac0d1c;
+    --btn-text-color: #ffffff;
+}
+
+.btn-color-success{
+    --first-color: #239B56;
+    --first-color-hover: #1b7643;
+    --first-color-light : #1b764221;
+    --btn-text-color: #ffffff;
+}
+
+.btn-size-sm{
+    padding: 0.375rem 0.75rem;
+}
+
+.btn-size-lg{
+    padding: 11px 22px;
+}
+
+
